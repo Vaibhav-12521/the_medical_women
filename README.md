@@ -21,6 +21,10 @@ Committed to guiding women toward healthy motherhood and overall well-being.
   <a href="https://www.instagram.com/the_medical_women" target="_blank" rel="noopener">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Profile"/>
   </a>
+  &nbsp;
+  <a href="https://www.facebook.com/share/186HpzWtxc/?mibextid=wwXIfr" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook Page"/>
+  </a>
 </p>
 
 <p align="center">

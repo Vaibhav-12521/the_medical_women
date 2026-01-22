@@ -25,10 +25,10 @@
         <h1 class="handle" id="handle">@the_medical_women</h1>
         <p class="bio">
           स्त्री एवं प्रसुति रोग <br>
-💌dm for collab - @tca_adss <br>
-👩‍⚕️Your Pregnancy Counselor<br>
-Homeopath C.G.O (Lucknow)pcod/pcos specialist <br>
-❤For Appointment  ⤵️
+          💌dm for collab - @tca_adss <br>
+          👩‍⚕️Your Pregnancy Counselor<br>
+          Homeopath C.G.O (Lucknow)pcod/pcos specialist <br>
+          ❤For Appointment  ⤵️
         </p>
       </header>
 
@@ -44,6 +44,12 @@ Homeopath C.G.O (Lucknow)pcod/pcos specialist <br>
             <path fill="currentColor" d="M23.5 6.2s-.23-1.63-.94-2.35c-.9-.94-1.9-.95-2.36-1C16.99 2.5 12 2.5 12 2.5h-.01s-4.99 0-8.19.35c-.46.05-1.46.06-2.36 1-.71.72-.94 2.35-.94 2.35S0 8.18 0 10.16v1.68c0 1.98.2 3.96.2 3.96s.23 1.63.94 2.35c.9.94 2.08.91 2.61 1.02 1.9.18 8.25.35 8.25.35s4.99 0 8.19-.35c.46-.05 1.46-.06 2.36-1 .71-.72.94-2.35.94-2.35s.2-1.98.2-3.96v-1.68c0-1.98-.2-3.96-.2-3.96ZM9.55 14.49V7.63l6.13 3.44-6.13 3.42Z"/>
           </svg>
           <span>YouTube</span>
+        </a>
+        <a class="social-link facebook" href="https://www.facebook.com/share/186HpzWtxc/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="30" height="20">
+            <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          <span>Facebook</span>
         </a>
       </nav>
         <footer class="footer"></footer>
@@ -82,6 +88,12 @@ Homeopath C.G.O (Lucknow)pcod/pcos specialist <br>
     const card = document.querySelector('.card');
     const page = document.querySelector('.page');
     const themeToggle = document.getElementById('themeToggle');
+    
+    const savedTheme = localStorage.getItem('themeIdx');
+    if (savedTheme !== null) {
+      themeIdx = parseInt(savedTheme, 10);
+    }
+    
     function applyTheme(idx) {
       const t = themes[idx];
       page.style.background = t.bg;
@@ -94,6 +106,8 @@ Homeopath C.G.O (Lucknow)pcod/pcos specialist <br>
         page.style.webkitBackdropFilter = '';
       }
       document.getElementById('themeIcon').textContent = ['✻','☀','❄','☁','⭕'][idx%5];
+      // Save theme to localStorage
+      localStorage.setItem('themeIdx', idx);
     }
     themeToggle.addEventListener('click', () => {
       themeIdx = (themeIdx + 1) % themes.length;
